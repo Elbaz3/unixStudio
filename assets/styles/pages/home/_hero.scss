@@ -1,9 +1,16 @@
 @use "../../abstracts/variables" as *;
 .hero {
-  padding-bottom: 80px;
-  border-bottom: 1px solid rgba(208, 208, 208, 1);
+  position: relative;
+
+  &__container {
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(208, 208, 208, 1);
+    @media (max-width: $mobile) {
+      padding-bottom: 20px;
+    }
+  }
   &__content-top {
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     gap: 80px;
     h1 {
@@ -20,17 +27,21 @@
     &__star {
       margin-top: 23px;
       width: clamp(80px, 8vw, 140px);
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
         margin-top: 15px;
         margin-right: 25px;
         align-self: flex-end;
       }
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       gap: 0;
     }
+  }
+  .vector-1 {
+    position: absolute;
+    left: 0;
   }
   &__content-bottom {
     width: 100%;
@@ -41,12 +52,14 @@
 
     p {
       max-width: 590px;
+      color: $main-color;
       font-family: $font-secondary;
       font-weight: 400;
       font-size: clamp(18px, 3vw, 24px);
       line-height: clamp(24px, 3vw, 32px);
-
       vertical-align: middle;
+      position: relative;
+      z-index: 6;
     }
 
     &__circle-button {
@@ -61,5 +74,12 @@
       align-items: center;
       gap: 34px;
     }
+  }
+  .light-1 {
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    width: 100%;
+    z-index: -1;
   }
 }

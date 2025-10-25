@@ -1,0 +1,49 @@
+@use "../../abstracts/variables" as *;
+
+.services {
+  background-color: $secondary-color;
+  color: $main-color;
+
+  &__container {
+    padding: 120px 0;
+
+    @media (max-width: $tablet) {
+      padding: 60px 0;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(28px, 2.4vw, 40px);
+    padding-bottom: clamp(28px, 2.4vw, 40px);
+    border-bottom: $main-border;
+
+    &:first-of-type {
+      @media (max-width: $tablet) {
+        padding-top: 0;
+      }
+    }
+    @media (min-width: $mobile) and (max-width: $desktop) {
+      gap: 60px;
+    }
+
+    h2 {
+      max-width: 954px;
+      font-family: $font-primary-bold;
+      font-size: clamp(20px, 3vw, 48px);
+      line-height: clamp(28px, 3.5vw, 56px);
+      text-transform: uppercase;
+    }
+
+    &__arrow {
+      @media (max-width: $tablet) {
+        width: 40px;
+      }
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        width: 60px;
+      }
+    }
+  }
+}

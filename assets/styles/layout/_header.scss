@@ -2,7 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: $main-color;
   .nav {
     @include flex-between;
     padding-bottom: 28px;
