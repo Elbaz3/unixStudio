@@ -1,0 +1,65 @@
+@use "../../abstracts/variables" as *;
+.hero {
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(208, 208, 208, 1);
+  &__content-top {
+    margin-top: 100px;
+    display: flex;
+    gap: 80px;
+    h1 {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      font-family: $font-primary-bold;
+      font-weight: bold;
+      font-size: clamp(36px, 7vw, 96px);
+      line-height: clamp(36px, 7vw, 96px);
+      text-transform: uppercase;
+    }
+
+    &__star {
+      margin-top: 23px;
+      width: clamp(80px, 8vw, 140px);
+      @media (max-width: $mobile) {
+        margin-top: 15px;
+        margin-right: 25px;
+        align-self: flex-end;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  &__content-bottom {
+    width: 100%;
+    margin-top: 204px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      max-width: 590px;
+      font-family: $font-secondary;
+      font-weight: 400;
+      font-size: clamp(18px, 3vw, 24px);
+      line-height: clamp(24px, 3vw, 32px);
+
+      vertical-align: middle;
+    }
+
+    &__circle-button {
+      width: clamp(120px, 9vw, 160px);
+      align-self: flex-end;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 155px;
+
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 34px;
+    }
+  }
+}

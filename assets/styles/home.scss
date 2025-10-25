@@ -1,4 +1,17 @@
-@use "./assets/variables" as *;
+// 1. Settings & tools
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
 
-@import "./assets/base";
-@import "./assets/components";
+// 2. Base styles (reset, global rules)
+@use "./base/reset";
+@use "./base/global";
+
+// 3. Layout (header, footer, grid, etc.)
+@use "./layout/header";
+@use "./layout/footer";
+
+// 4. Components (buttons, cards, etc.)
+@use "./components/button";
+
+// 5. (page-specific styles)
+@use "./pages/home/hero";
