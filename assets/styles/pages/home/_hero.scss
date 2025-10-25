@@ -1,7 +1,6 @@
 @use "../../abstracts/variables" as *;
 .hero {
   position: relative;
-
   &__container {
     padding-bottom: 80px;
     border-bottom: 1px solid rgba(208, 208, 208, 1);
@@ -76,10 +75,11 @@
     }
   }
   .light-1 {
+    width: 100%;
+    min-width: 600px;
     position: absolute;
     bottom: -24px;
     right: 0;
-    width: 100%;
     z-index: -1;
   }
 }

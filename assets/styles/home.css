@@ -57,6 +57,32 @@ p {
   height: fit-content;
 }
 
+.btn {
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgb(42, 42, 42);
+  font-family: "Hubot Sans", sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 24px);
+  line-height: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.heading-text {
+  font-family: "Panchang-bold", sans-serif;
+  font-size: clamp(32px, 4vw, 64px);
+  line-height: clamp(36px, 4vw, 68px);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: "Panchang-Semibold", sans-serif;
+  font-size: clamp(16px, 2vw, 32px);
+  line-height: clamp(20px, 2.2vw, 42px);
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .header {
   padding-top: 20px;
   background-color: rgb(26, 26, 26);
@@ -186,10 +212,11 @@ p {
   }
 }
 .hero .light-1 {
+  width: 100%;
+  min-width: 600px;
   position: absolute;
   bottom: -24px;
   right: 0;
-  width: 100%;
   z-index: -1;
 }
 
@@ -217,23 +244,10 @@ p {
   gap: 48px;
   max-width: 917px;
 }
-.about__heading h2 {
-  font-family: "Panchang-bold", sans-serif;
-  font-size: clamp(32px, 4vw, 64px);
-  line-height: clamp(36px, 4vw, 68px);
-  text-transform: uppercase;
-}
-.about__heading h3 {
-  font-family: "Panchang-Semibold", sans-serif;
-  font-size: clamp(16px, 2vw, 32px);
-  line-height: clamp(20px, 2.2vw, 42px);
-  vertical-align: middle;
-  text-transform: uppercase;
-}
 .about__text {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: end;
   font-family: "Hubot Sans", sans-serif;
 }
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -247,16 +261,6 @@ p {
   font-size: clamp(16px, 1.5vw, 24px);
   line-height: clamp(22px, 2vw, 32px);
   vertical-align: middle;
-}
-.about__text__button {
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgb(42, 42, 42);
-  font-weight: 500;
-  font-size: clamp(16px, 1.5vw, 24px);
-  line-height: 100%;
-  letter-spacing: 5%;
-  vertical-align: middle;
-  cursor: pointer;
 }
 @media (max-width: 768px) {
   .about__text {
@@ -312,4 +316,136 @@ p {
   .services__box__arrow {
     width: 60px;
   }
+}
+
+.video {
+  padding: 120px 0;
+}
+@media (max-width: 768px) {
+  .video {
+    padding: 60px 0;
+  }
+}
+.video__container {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+}
+@media (max-width: 768px) {
+  .video__container {
+    gap: 36px;
+  }
+}
+.video__img--desktop {
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .video__img--desktop {
+    display: none;
+  }
+}
+.video__img--mobile {
+  border-radius: 20px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .video__img--mobile {
+    display: block;
+  }
+}
+.video__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.video__details__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.video__details__text h3 {
+  font-size: clamp(18px, 2vw, 32px);
+  line-height: clamp(100%, 2.3vw, 36px);
+  text-transform: uppercase;
+}
+.video__details__text p {
+  color: rgb(160, 160, 160);
+  font-weight: 400;
+  font-size: clamp(16px, 1.75vw, 28px);
+  line-height: clamp(22px, 1.75vw, 28px);
+}
+.video__details__btn {
+  border-color: rgb(255, 255, 255);
+}
+@media (max-width: 576px) {
+  .video__details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.witness {
+  padding-top: 68px;
+}
+.witness__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  overflow-x: hidden;
+}
+.witness__header p {
+  max-width: 917px;
+  margin-top: 40px;
+}
+.witness__list {
+  padding-bottom: 80px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  overflow-x: auto;
+  scrollbar-color: rgb(18, 18, 18) rgb(42, 42, 42);
+  scrollbar-width: thin;
+}
+.witness__list__box {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.witness__list__box img {
+  width: 100%;
+  max-width: 560px;
+  min-width: 560px;
+  border-radius: 20px;
+}
+@media (max-width: 576px) {
+  .witness__list__box img {
+    max-width: 319px;
+    min-width: 319px;
+  }
+}
+.witness__list__box__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.witness__list::-webkit-scrollbar {
+  height: 8px; /* horizontal scrollbar */
+}
+
+.witness__list::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 10px;
+}
+
+.witness__list::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+.witness__list::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }/*# sourceMappingURL=home.css.map */

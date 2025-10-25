@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .container {
   width: 90%;
   max-width: 1280px;
@@ -6,4 +8,31 @@
 
 .star {
   height: fit-content;
+}
+
+.btn {
+  padding-bottom: 2px;
+  border-bottom: $secondary-border;
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: clamp(16px, 1.5vw, 24px);
+  line-height: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.heading-text {
+  font-family: $font-primary-bold;
+  font-size: clamp(32px, 4vw, 64px);
+  line-height: clamp(36px, 4vw, 68px);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: $font-primary-semi;
+  font-size: clamp(16px, 2vw, 32px);
+  line-height: clamp(20px, 2.2vw, 42px);
+
+  vertical-align: middle;
+  text-transform: uppercase;
 }
