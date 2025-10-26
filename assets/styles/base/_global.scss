@@ -45,3 +45,61 @@
     color: $fourth-color;
   }
 }
+
+.scroll-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @media (max-width: $tablet) {
+      gap: 16px;
+    }
+    &:first-of-type {
+      align-self: flex-end;
+      transform: translateX(-200px);
+      animation: scroll-right 80s linear infinite;
+    }
+    &:last-of-type {
+      align-self: flex-start;
+
+      animation: scroll 80s linear infinite;
+    }
+    p {
+      font-family: $font-primary-bold;
+      @media (max-width: $tablet) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+    img {
+      width: 100px;
+      @media (max-width: $tablet) {
+        width: 48px;
+      }
+    }
+  }
+}
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

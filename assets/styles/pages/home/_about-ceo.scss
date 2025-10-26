@@ -1,5 +1,10 @@
 .about-ceo {
   padding: 152px 0;
+
+  @media (max-width: $mobile) {
+    padding: 72px 0;
+  }
+
   &__container {
     @media (min-width: $desktop) {
       padding-left: 260px;
@@ -9,15 +14,14 @@
     }
   }
 
-  &__heading-text {
-    //  text-align: center;
-  }
-
   &__wrapper {
     margin-top: 80px;
     display: flex;
     align-items: flex-start;
     gap: 50px;
+    @media (max-width: $mobile) {
+      gap: 15.83px;
+    }
   }
 
   &__quote-icon {

@@ -93,6 +93,69 @@ p {
   color: rgb(184, 184, 184);
 }
 
+.scroll-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.scroll-box__text {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .scroll-box__text {
+    gap: 16px;
+  }
+}
+.scroll-box__text:first-of-type {
+  align-self: flex-end;
+  transform: translateX(-200px);
+  animation: scroll-right 80s linear infinite;
+}
+.scroll-box__text:last-of-type {
+  align-self: flex-start;
+  animation: scroll 80s linear infinite;
+}
+.scroll-box__text p {
+  font-family: "Panchang-bold", sans-serif;
+}
+@media (max-width: 768px) {
+  .scroll-box__text p {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+.scroll-box__text img {
+  width: 100px;
+}
+@media (max-width: 768px) {
+  .scroll-box__text img {
+    width: 48px;
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .header {
   padding-top: 20px;
   background-color: rgb(26, 26, 26);
@@ -463,6 +526,11 @@ p {
 .about-ceo {
   padding: 152px 0;
 }
+@media (max-width: 576px) {
+  .about-ceo {
+    padding: 72px 0;
+  }
+}
 @media (min-width: 1024px) {
   .about-ceo__container {
     padding-left: 260px;
@@ -478,6 +546,11 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 50px;
+}
+@media (max-width: 576px) {
+  .about-ceo__wrapper {
+    gap: 15.83px;
+  }
 }
 @media (max-width: 576px) {
   .about-ceo__quote-icon {
@@ -554,4 +627,46 @@ p {
   .about-ceo__quote__ceo__arrows {
     width: 50px;
   }
+}
+
+.glims {
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 26, 26);
+  overflow-x: hidden;
+}
+.glims__container {
+  border-bottom: 1px solid rgb(208, 208, 208);
+  padding: 174px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+@media (max-width: 768px) {
+  .glims__container {
+    gap: 40px;
+    padding: 68px 0 60px;
+  }
+}
+.glims__text {
+  width: 816px;
+  text-align: center;
+}
+.glims__text p {
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(18, 18, 18);
+}
+@media (max-width: 768px) {
+  .glims__text p {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 319px;
+    margin: auto;
+  }
+}
+.glims__text .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0;
 }/*# sourceMappingURL=home.css.map */
