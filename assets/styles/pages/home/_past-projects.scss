@@ -1,0 +1,197 @@
+.past-projects {
+  background-color: $secondary-color;
+  color: $main-color;
+  padding: 100px 0;
+
+  @media (max-width: $mobile) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $desktop) {
+      margin-right: auto;
+    }
+  }
+
+  &__heading {
+    @include flex-between-end;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 32px;
+      align-items: self-start;
+    }
+    h2 {
+      max-width: 500px;
+      font-family: $font-primary-bold;
+      text-transform: uppercase;
+      @include font-style(64px, 68px);
+
+      @media (max-width: $tablet) {
+        max-width: 250px;
+
+        @include font-style(32px, 36px);
+      }
+    }
+
+    .btn {
+      @media (min-width: $desktop) {
+        width: 280px;
+      }
+      @media (min-width: $desktop-xl) {
+        width: 480px;
+      }
+    }
+  }
+
+  &__projects {
+    width: 100%;
+    border-top: $main-border;
+    border-bottom: $main-border;
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $tablet) {
+      margin-top: 48px;
+    }
+
+    &__place-holder {
+    }
+
+    &__list {
+      max-width: 1016px;
+      @media (min-width: $mobile) and (max-width: $desktop) {
+        max-width: 100%;
+      }
+      @media (min-width: $desktop) and (max-width: $desktop-xl) {
+        max-width: 90%;
+      }
+
+      .project {
+        display: flex;
+        height: 600px;
+        @media (max-width: $tablet) {
+          max-height: 600px;
+          height: auto;
+          max-height: fit-content;
+          flex-direction: column;
+        }
+        .desc {
+          border-right: $main-border;
+          border-left: $main-border;
+          padding: 40px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @media (max-width: $tablet) {
+            padding: 40px 0;
+            border-right: 0;
+            border-left: 0;
+          }
+          &.desc-1 {
+            @media (max-width: $tablet) {
+              border-left: 0;
+            }
+          }
+          &.desc-2 {
+            border-left: 0;
+            border-right: 0;
+
+            border-top: $main-border;
+            @media (max-width: $tablet) {
+              border-left: 0;
+            }
+          }
+          &__text {
+            &__heading {
+              @include flex-between;
+              h2 {
+                font-family: $font-primary-bold;
+                @include font-style(24px, 28px);
+                text-transform: uppercase;
+                border-bottom: $secondary-border;
+                padding-bottom: 12px;
+
+                @media (max-width: $tablet) {
+                  @include font-style(20px, 20px);
+                }
+              }
+            }
+            p {
+              @include font-style(18px, 24px);
+              margin-top: 60px;
+              color: rgba(65, 65, 65, 1);
+              @media (max-width: $tablet) {
+                margin-top: 32px;
+              }
+            }
+          }
+
+          &__p {
+            font-family: $font-secondary;
+            font-weight: bold;
+            @include font-style(20px, 100%);
+            @media (max-width: $tablet) {
+              margin-top: 8px;
+            }
+          }
+        }
+        .image-wrapper {
+          flex: 1;
+          padding: 40px;
+          overflow: hidden;
+
+          &:first-of-type {
+            border-left: $main-border;
+            border-right: $main-border;
+
+            border-top: 1px solid rgb(208, 208, 208);
+
+            img {
+              max-width: 100%;
+              object-fit: cover;
+            }
+            @media (max-width: $tablet) {
+              border-left: 0;
+            }
+          }
+
+          @media (max-width: $tablet) {
+            padding: 40px 0;
+            max-width: 100%;
+          }
+          &--desktop {
+            @media (max-width: $tablet) {
+              display: none;
+            }
+          }
+          &--mobile {
+            @media (min-width: $tablet) {
+              display: none;
+            }
+          }
+
+          img {
+            border-radius: 16px;
+
+            @media (min-width: $tablet) {
+              max-width: fit-content;
+              max-height: 100%;
+            }
+          }
+        }
+      }
+
+      &__project-2 {
+        .image-wrapper {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+// services
