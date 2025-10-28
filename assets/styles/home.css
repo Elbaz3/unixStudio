@@ -1056,6 +1056,7 @@ p {
 @media (max-width: 768px) {
   .past-projects__services__services-list .box .box-header {
     padding-bottom: 21px;
+    align-items: center;
   }
 }
 .past-projects__services__services-list .box .box-header h2 {
