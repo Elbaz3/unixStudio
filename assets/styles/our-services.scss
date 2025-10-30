@@ -1,0 +1,15 @@
+// 1. Settings & tools
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// 2. Base styles (reset, global rules)
+@import "./base/reset";
+@import "./base/global";
+@import "./base/shared";
+
+// 3. Layout (header, footer, grid, etc.)
+@import "./layout/header";
+@import "./layout/footer";
+
+// 4. Components (buttons, cards, etc.)
+@import "./components/button";
