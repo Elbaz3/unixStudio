@@ -430,6 +430,8 @@
               }
             }
             p {
+              @include font-style(16px, 100%);
+
               @media (max-width: $desktop-xl) {
                 @include font-style(12px, 100%);
                 margin-top: 4px;

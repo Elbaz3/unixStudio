@@ -1579,6 +1579,10 @@ p {
     line-height: 100%;
   }
 }
+.worthy__our-clients__quote__quote-text .client-data .client-info p {
+  font-size: 16px;
+  line-height: 100%;
+}
 @media (max-width: 1200px) {
   .worthy__our-clients__quote__quote-text .client-data .client-info p {
     font-size: 12px;
