@@ -1,6 +1,9 @@
 .header {
   padding-top: 20px;
   background-color: $main-color;
+  position: relative;
+  z-index: 1000;
+
   .nav {
     @include flex-between;
     padding-bottom: 28px;

@@ -1,7 +1,25 @@
 .about {
+  position: relative;
   background-color: $secondary-color;
   color: $main-color;
   padding-top: 120px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 208px;
+    right: 0;
+    background: url(../media/Vector-about.png) no-repeat top / 100%;
+    z-index: 5;
+
+    @media (max-width: $tablet) {
+      top: 264px;
+      background: url(../media/Vector-about-mobile.png) no-repeat top / 100%;
+    }
+  }
 
   &__container {
     display: flex;

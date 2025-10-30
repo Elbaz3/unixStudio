@@ -1,5 +1,38 @@
 .hero {
   position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../media/light-hero.svg) no-repeat bottom / 100%;
+    transform: translateY(25px);
+
+    @media (max-width: $mobile) {
+      background: url(../media/light-hero-mobile.png) no-repeat bottom / 100%;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    background: url(../media/vector-hero.png) no-repeat bottom / 100%;
+    z-index: 5;
+
+    @media (max-width: $mobile) {
+      bottom: 90px;
+      background: url(../media/vector-hero-mobile.png) no-repeat bottom / 100%;
+    }
+  }
+
   &__container {
     padding-bottom: 80px;
     border-bottom: 1px solid rgba(208, 208, 208, 1);
@@ -8,6 +41,7 @@
     }
   }
   &__content-top {
+    position: relative;
     padding-top: 100px;
     display: flex;
     gap: 80px;
@@ -22,13 +56,18 @@
       text-transform: uppercase;
     }
 
-    &__star {
-      margin-top: 23px;
-      width: clamp(80px, 8vw, 140px);
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      right: 8vw;
+      background: url(../media/star-hero.svg) no-repeat top right / 140px;
+      z-index: 5;
+
       @media (max-width: $tablet) {
-        margin-top: 15px;
-        margin-right: 25px;
-        align-self: flex-end;
+        background: url(../media/star-hero.svg) no-repeat bottom right / 80px;
       }
     }
 
@@ -37,16 +76,31 @@
       gap: 0;
     }
   }
-  .vector-1 {
-    position: absolute;
-    left: 0;
-  }
+
   &__content-bottom {
     width: 100%;
-    margin-top: 204px;
+    margin-top: 262px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      bottom: 74px;
+      right: 5vw;
+      background: url(../media/circle-hero.svg) no-repeat bottom right / 160px;
+      z-index: 5;
+
+      @media (max-width: $tablet) {
+        bottom: 150px;
+
+        background: url(../media/circle-hero.svg) no-repeat bottom right / 120px;
+      }
+    }
 
     p {
       max-width: 590px;
@@ -66,19 +120,11 @@
     }
 
     @media (max-width: $mobile) {
-      margin-top: 155px;
+      margin-top: 404px;
 
       flex-direction: column-reverse;
       align-items: center;
       gap: 34px;
     }
-  }
-  .light-1 {
-    width: 100%;
-    min-width: 600px;
-    position: absolute;
-    bottom: -24px;
-    right: 0;
-    z-index: -1;
   }
 }
