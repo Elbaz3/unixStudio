@@ -7,12 +7,23 @@
     padding: 60px 0;
   }
 
+  .projects-wrapper {
+    margin-right: 5vw;
+    @media (max-width: $desktop) {
+      margin-right: 0;
+    }
+  }
+
   &__container {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    margin: 0;
+
     @media (max-width: $desktop) {
-      margin-right: auto;
+      margin-inline: 5vw;
+      width: 90%;
     }
   }
 
@@ -215,6 +226,9 @@
       width: 100%;
       padding: 10px;
     }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      padding-left: 40px;
+    }
     @media (min-width: $desktop) and (max-width: $desktop-xl) {
       width: 90%;
     }
@@ -295,6 +309,7 @@
       .header-wrapper {
         display: flex;
         flex-direction: column;
+
         span {
           font-family: $font-secondary;
           font-weight: 500;
@@ -330,7 +345,6 @@
 
     .box {
       margin-bottom: 112px;
-      // margin-left: 40px;
 
       @media (max-width: $tablet) {
         margin-bottom: 0;
@@ -346,6 +360,7 @@
 
         @media (max-width: $tablet) {
           padding-bottom: 21px;
+          padding-right: 0;
           align-items: center;
         }
 
