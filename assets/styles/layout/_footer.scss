@@ -4,6 +4,10 @@
   max-height: 100vh;
   position: relative;
 
+  @media (max-width: $desktop-xl) {
+    max-height: none;
+  }
+
   &__container {
     display: flex;
 
@@ -52,9 +56,15 @@
     }
     &__place {
       margin: 0 0 0 5vw;
+
       @media (max-width: $tablet) {
         margin: 0;
       }
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        max-width: 350px;
+      }
+
       span {
         font-family: $font-secondary;
         font-weight: 400;
@@ -64,6 +74,7 @@
         @media (max-width: $tablet) {
           @include font-style(16px, 22px);
         }
+
         @media (min-width: $tablet) and (max-width: $desktop-xl) {
           @include font-style(18px, 24px);
         }
@@ -152,6 +163,11 @@
         margin: 0;
       }
 
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        padding-bottom: 20px;
+        gap: 28px;
+      }
+
       img {
         width: 30px;
         cursor: pointer;
@@ -168,7 +184,7 @@
           padding-bottom: 100px;
         }
         @media (min-width: $tablet) and (max-width: $desktop-xl) {
-          @include font-style(16px, 22px);
+          @include font-style(13px, 22px);
         }
       }
     }
@@ -180,6 +196,10 @@
     min-width: 0;
     position: relative;
     z-index: 1;
+
+    @media (min-width: $tablet) and (max-width: $desktop-xl) {
+      max-height: none;
+    }
 
     img {
       width: 100%;
