@@ -1,0 +1,145 @@
+%flex-1 {
+  flex: 1;
+  min-width: 0;
+}
+
+%col-head {
+  font-family: $font-secondary;
+  color: $third-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: $main-border;
+  @include font-style(16px, 24px);
+
+  @media (max-width: $tablet) {
+    padding-bottom: 32px;
+  }
+}
+
+.our-services {
+  background-color: $secondary-color;
+  color: $main-color;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 140px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__col-1 {
+    @extend %flex-1;
+
+    &__head {
+      @extend %col-head;
+    }
+
+    &__service {
+      padding-right: 40px;
+
+      @media (max-width: $tablet) {
+        padding-right: 0;
+      }
+    }
+  }
+  &__col-2 {
+    @extend %flex-1;
+
+    &__head {
+      @extend %col-head;
+      padding-left: 40px;
+      border-left: $main-border;
+
+      @media (max-width: $tablet) {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+
+    &__service {
+      padding-left: 40px;
+      border-left: $main-border;
+
+      @media (max-width: $tablet) {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+  }
+
+  &__service {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include flex-between;
+    border-bottom: $main-border;
+    height: 192px;
+    max-height: 192px;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      height: 140px;
+      max-height: 140px;
+    }
+
+    @media (max-width: $tablet) {
+      padding-top: 36px;
+      padding-bottom: 36px;
+      height: 98px;
+      max-height: 98px;
+    }
+
+    span {
+      font-family: $font-secondary;
+      color: $third-color;
+      @include font-style(20px, 30px);
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    h2 {
+      flex: 1;
+      text-align: start;
+      padding-left: 38px;
+      font-family: $font-primary-bold;
+      @include font-style(32px, 36px);
+      cursor: pointer;
+
+      &:hover + .our-services__service__arrow > img {
+        transform: translate(10px, -10px);
+      }
+
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        @include font-style(18px, 28px);
+        padding-left: 20px;
+      }
+      @media (min-width: $desktop) and (max-width: $desktop-xl) {
+        @include font-style(28px, 24px);
+      }
+      @media (max-width: $tablet) {
+        padding-left: 0;
+        @include font-style(20px, 100%);
+      }
+    }
+
+    &__arrow {
+      img {
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          transform: translate(10px, -10px);
+        }
+      }
+    }
+  }
+}

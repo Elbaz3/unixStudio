@@ -1,0 +1,178 @@
+%span-style {
+  color: $third-color;
+  font-family: $font-secondary;
+  @include font-style(16px, 24px);
+}
+%p-style {
+  max-width: 835px;
+  font-family: $font-secondary;
+  @include font-style(44px, 56px);
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @include font-style(34px, 46px);
+  }
+
+  @media (max-width: $tablet) {
+    @include font-style(20px, 30px);
+  }
+}
+
+.funding {
+  background-color: $secondary-color;
+  color: $main-color;
+  padding-bottom: 120px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 0;
+  }
+
+  &__heading {
+    h2 {
+      margin: 0 5vw;
+      padding-bottom: 80px;
+      @include font-style(64px, 68px);
+      font-family: $font-primary-bold;
+      max-width: 882px;
+
+      @media (max-width: $tablet) {
+        @include font-style(32px, 36px);
+        padding-bottom: 48px;
+      }
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        @include font-style(48px, 53px);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    border-bottom: $main-border;
+
+    @media (max-width: $tablet) {
+      @include font-style(32px, 36px);
+      margin-left: 5vw;
+      border-bottom: 0;
+      padding-bottom: 80px;
+    }
+
+    &__place-holder {
+      flex: 1;
+      min-height: 0;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &__text-content {
+      flex: 3;
+      min-height: 0;
+      border-left: $main-border;
+      margin-right: 5vw;
+
+      @media (max-width: $tablet) {
+        border-left: 0;
+      }
+
+      &__text {
+        padding-bottom: 20px;
+        padding-left: 40px;
+        display: flex;
+        align-items: flex-end;
+        gap: 63px;
+
+        @media (max-width: $tablet) {
+          padding-bottom: 16px;
+          padding-left: 0;
+          flex-direction: column-reverse;
+          gap: 48px;
+          align-items: flex-start;
+        }
+
+        span {
+          @extend %span-style;
+        }
+
+        p {
+          padding-bottom: 100px;
+          @extend %p-style;
+
+          @media (max-width: $tablet) {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &__list {
+        padding-left: 40px;
+
+        &__item {
+          border-bottom: $main-border;
+          padding: 24px 0;
+          display: flex;
+          gap: 40px;
+
+          &:first-of-type {
+            border-top: $main-border;
+          }
+
+          @media (max-width: $tablet) {
+            @include font-style(24px, 28px);
+          }
+
+          span {
+            @extend %span-style;
+            padding-left: 222px;
+
+            @media (min-width: $tablet) and (max-width: $desktop) {
+              padding-left: 80px;
+            }
+
+            @media (max-width: $tablet) {
+              padding-left: 0;
+            }
+          }
+
+          h2 {
+            @include font-style(32px, 36px);
+
+            @media (max-width: $tablet) {
+              @include font-style(24px, 28px);
+            }
+          }
+        }
+      }
+
+      &__bottom {
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 76px;
+
+        @media (max-width: $tablet) {
+          padding: 48px 0 80px;
+          align-items: center;
+          gap: 40px;
+          padding-bottom: 0;
+        }
+
+        p {
+          @extend %p-style;
+        }
+
+        img {
+          width: 120px;
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            transform: translate(-10px, -10px);
+          }
+          @media (max-width: $tablet) {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
