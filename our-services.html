@@ -10,23 +10,26 @@
   <body>
     <!-- START HEADER -->
     <header class="header">
-      <nav class="nav container">
-        <div class="nav__logo">
+      <div class="container header__container">
+        <div class="header__logo">
           <img src="./assets/media/UnixStudio.png" alt="" />
         </div>
-        <div class="nav__wrapper">
-          <ul class="nav__wrapper__list">
-            <li><a href="/">Case</a></li>
-            <li><a href="/our-services.html">Services</a></li>
-            <li><a href="/about-us.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/news.html">News</a></li>
-          </ul>
-          <div class="nav__wrapper__menu nav__wrapper__menu--hidden">
-            <img src="./assets/media/Button.png" alt="" />
+        <nav class="header__nav">
+          <div class="nav__wrapper">
+            <ul class="nav__wrapper__list">
+              <li><a href="/">Case</a></li>
+              <li><a href="/our-services.html">Services</a></li>
+              <li><a href="/about-us.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/news.html">News</a></li>
+            </ul>
           </div>
+        </nav>
+
+        <div class="header__menu header__menu--hidden">
+          <img src="./assets/media/Button.png" alt="" />
         </div>
-      </nav>
+      </div>
     </header>
     <!-- END HEADER -->
     <main>
@@ -84,7 +87,7 @@
             <img src="./assets/media/arrow-w-up.svg" alt="" />
           </div>
           <div class="footer__info__copyright">
-            <img src="./assets/media/scroll-up.svg" alt="" />
+            <img class="scroll-top" src="./assets/media/scroll-up.svg" alt="" />
             <p>© 2025 Unix Studio. — Product Design Agency</p>
           </div>
         </div>
@@ -94,5 +97,7 @@
       </div>
     </footer>
     <!-- END FOOTER -->
+
+    <script src="./assets/scripts/main.js"></script>
   </body>
 </html>

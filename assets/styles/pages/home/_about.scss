@@ -27,6 +27,8 @@
     gap: 263px;
     border-bottom: $main-border;
     padding-bottom: 80px;
+    position: relative;
+    z-index: 10;
 
     @media (max-width: $mobile) {
       gap: 156px;

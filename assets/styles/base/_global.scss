@@ -16,6 +16,10 @@
   line-height: 100%;
   vertical-align: middle;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    padding-bottom: 8px;
+  }
 }
 
 .heading-text {

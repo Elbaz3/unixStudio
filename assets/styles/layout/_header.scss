@@ -4,25 +4,20 @@
   position: relative;
   z-index: 1000;
 
-  .nav {
+  &__container {
     @include flex-between;
     padding-bottom: 28px;
     border-bottom: 1px solid rgb(51, 51, 51);
 
+    @media (max-width: $tablet) {
+      border: 0;
+    }
+  }
+
+  .nav {
     &__wrapper {
       display: flex;
       gap: 38px;
-
-      &__menu {
-        border: 1px solid rgba(65, 65, 65, 1);
-        border-radius: 50%;
-        padding: 8px;
-        cursor: pointer;
-
-        @media (max-width: $tablet) {
-          display: block;
-        }
-      }
     }
 
     &__wrapper__list {
@@ -32,16 +27,55 @@
       gap: 28px;
       font-size: 16px;
       text-transform: uppercase;
+      transition: 0.3s;
       & li {
+        transition: 0.3s;
         cursor: pointer;
+
+        &:hover {
+          transform: rotate(10deg);
+        }
       }
       @media (max-width: $tablet) {
-        display: none;
+        transform: translateX(-1000px);
+        pointer-events: none;
+        visibility: hidden;
+        background-color: $main-color;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        height: 100vh;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 5vw;
+      }
+
+      &.toggle-open {
+        transform: translateX(0);
+        pointer-events: auto;
+        visibility: visible;
       }
     }
   }
+
+  &__menu {
+    border: 1px solid rgba(65, 65, 65, 1);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+  }
 }
 
-.nav__wrapper__menu--hidden {
-  display: none;
+.header__menu--hidden {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.rotate-icon {
+  transform: rotate(90deg);
 }

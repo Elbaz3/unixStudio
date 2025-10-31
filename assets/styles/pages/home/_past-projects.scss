@@ -126,9 +126,23 @@
                 text-transform: uppercase;
                 border-bottom: $secondary-border;
                 padding-bottom: 12px;
-
+                cursor: pointer;
                 @media (max-width: $tablet) {
                   @include font-style(20px, 20px);
+                }
+
+                transition: transform 0.3s;
+                &:hover + img {
+                  transform: translate(10px, -10px);
+                }
+              }
+
+              &__img {
+                cursor: pointer;
+
+                transition: transform 0.3s;
+                &:hover {
+                  transform: translate(10px, -10px);
                 }
               }
             }
@@ -368,9 +382,23 @@
         h2 {
           font-family: $font-primary-bold;
           @include font-style(32px, 36px);
-
+          cursor: pointer;
           @media (max-width: $tablet) {
             @include font-style(20px, 20px);
+          }
+
+          transition: transform 0.3s;
+          &:hover + img {
+            transform: translate(20px, -20px);
+          }
+        }
+
+        &__img {
+          cursor: pointer;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: translate(10px, -10px);
           }
         }
       }

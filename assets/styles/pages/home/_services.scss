@@ -1,6 +1,8 @@
 .services {
   background-color: $secondary-color;
   color: $main-color;
+  position: relative;
+  z-index: 10;
 
   &__container {
     padding: 120px 0;
@@ -17,6 +19,12 @@
     padding-top: clamp(28px, 2.4vw, 40px);
     padding-bottom: clamp(28px, 2.4vw, 40px);
     border-bottom: $main-border;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+    &:hover &__arrow {
+      transform: translate(10px, -10px);
+    }
 
     &:first-of-type {
       @media (max-width: $tablet) {
@@ -36,6 +44,8 @@
     }
 
     &__arrow {
+      transition: transform 0.3s;
+
       @media (max-width: $tablet) {
         width: 40px;
       }

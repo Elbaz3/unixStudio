@@ -10,23 +10,26 @@
   <body>
     <!-- START HEADER -->
     <header class="header">
-      <nav class="nav container">
-        <div class="nav__logo">
+      <div class="container header__container">
+        <div class="header__logo">
           <img src="./assets/media/UnixStudio.png" alt="" />
         </div>
-        <div class="nav__wrapper">
-          <ul class="nav__wrapper__list">
-            <li><a href="/">Case</a></li>
-            <li><a href="/our-services.html">Services</a></li>
-            <li><a href="/about-us.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/news.html">News</a></li>
-          </ul>
-          <div class="nav__wrapper__menu nav__wrapper__menu--hidden">
-            <img src="./assets/media/Button.png" alt="" />
+        <nav class="header__nav">
+          <div class="nav__wrapper">
+            <ul class="nav__wrapper__list">
+              <li><a href="/">Case</a></li>
+              <li><a href="/our-services.html">Services</a></li>
+              <li><a href="/about-us.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/news.html">News</a></li>
+            </ul>
           </div>
+        </nav>
+
+        <div class="header__menu header__menu--hidden">
+          <img src="./assets/media/Button.png" alt="" />
         </div>
-      </nav>
+      </div>
     </header>
     <!-- END HEADER -->
     <main>
@@ -174,7 +177,6 @@
         </div>
       </section>
       <!-- END WITNESS SECTION -->
-
       <div class="wrapper-ceo">
         <!-- START ABOUT-CEO SECTION -->
         <section class="about-ceo">
@@ -348,7 +350,11 @@
                     <div class="desc__text">
                       <div class="desc__text__heading">
                         <h2>Olive Max</h2>
-                        <img src="./assets/media/arrow-black.svg" alt="" />
+                        <img
+                          class="desc__text__heading__img"
+                          src="./assets/media/arrow-black.svg"
+                          alt=""
+                        />
                       </div>
                       <p>
                         The platform allows incredible flexibility via creation,
@@ -374,7 +380,11 @@
                     <div class="desc__text">
                       <div class="desc__text__heading">
                         <h2>SHOCK</h2>
-                        <img src="./assets/media/arrow-black.svg" alt="" />
+                        <img
+                          class="desc__text__heading__img"
+                          src="./assets/media/arrow-black.svg"
+                          alt=""
+                        />
                       </div>
                       <p>
                         The platform allows incredible flexibility via creation,
@@ -414,7 +424,11 @@
                       <div class="box">
                         <div class="box-header">
                           <h2>Web Application</h2>
-                          <img src="./assets/media/arrow-black.svg" alt="" />
+                          <img
+                            class="box-header__img"
+                            src="./assets/media/arrow-black.svg"
+                            alt=""
+                          />
                         </div>
                         <div class="box-content">
                           <p>
@@ -430,7 +444,11 @@
                           <span>INDUSTRIES</span>
                           <div class="box-header">
                             <h2>Mobile</h2>
-                            <img src="./assets/media/arrow-black.svg" alt="" />
+                            <img
+                              class="box-header__img"
+                              src="./assets/media/arrow-black.svg"
+                              alt=""
+                            />
                           </div>
                         </div>
                         <div class="box-content">
@@ -447,7 +465,11 @@
                       <div class="box">
                         <div class="box-header">
                           <h2>Sass</h2>
-                          <img src="./assets/media/arrow-black.svg" alt="" />
+                          <img
+                            class="box-header__img"
+                            src="./assets/media/arrow-black.svg"
+                            alt=""
+                          />
                         </div>
                         <div class="box-content">
                           <p>
@@ -461,7 +483,11 @@
                       <div class="box">
                         <div class="box-header">
                           <h2>Sofware to clouds</h2>
-                          <img src="./assets/media/arrow-black.svg" alt="" />
+                          <img
+                            class="box-header__img"
+                            src="./assets/media/arrow-black.svg"
+                            alt=""
+                          />
                         </div>
                         <div class="box-content">
                           <p></p>
@@ -476,7 +502,6 @@
         </div>
       </section>
       <!-- END PAST-PROJECTS SECTION -->
-
       <!-- START GLIMS SECTION -->
       <section class="glims glims-2">
         <div class="container glims__container">
@@ -795,7 +820,7 @@
             <img src="./assets/media/arrow-w-up.svg" alt="" />
           </div>
           <div class="footer__info__copyright">
-            <img src="./assets/media/scroll-up.svg" alt="" />
+            <img class="scroll-top" src="./assets/media/scroll-up.svg" alt="" />
             <p>© 2025 Unix Studio. — Product Design Agency</p>
           </div>
         </div>
