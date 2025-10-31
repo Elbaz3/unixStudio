@@ -18,7 +18,7 @@
   cursor: pointer;
   transition: 0.3s;
   &:hover {
-    padding-bottom: 8px;
+    transform: rotate(10deg);
   }
 }
 
