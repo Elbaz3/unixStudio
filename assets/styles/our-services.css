@@ -155,6 +155,16 @@ p {
     transform: translateX(-50%);
   }
 }
+.wrapper-ceo,
+.wrapper-worthy {
+  position: relative;
+}
+
+.glims-2::before {
+  display: none !important;
+  content: none;
+}
+
 .hero {
   position: relative;
 }

@@ -1,8 +1,25 @@
 .worthy {
   margin-top: 255px;
+  position: relative;
 
   @media (max-width: $desktop-xl) {
     margin-top: 49px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -412px;
+    right: 0;
+    background: url(../media/Graphic-worthy-mobile.svg) no-repeat top / 100%;
+    z-index: -1;
+
+    @media (min-width: 530px) {
+      background: none;
+    }
   }
 
   &__heading {

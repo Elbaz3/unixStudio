@@ -1,8 +1,27 @@
 .about-ceo {
-  padding: 152px 0;
+  padding: 152px 0 336px;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: $mobile) {
     padding: 72px 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 640px;
+    right: 0;
+    background: url(../media/Vector-about-ceo.svg) no-repeat top / 100%;
+    z-index: 2;
+
+    @media (max-width: $tablet) {
+      top: 230px;
+      background: none;
+    }
   }
 
   &__container {

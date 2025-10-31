@@ -2,6 +2,7 @@
   background-color: $secondary-color;
   color: $main-color;
   padding: 100px 0 26px 0;
+  position: relative;
 
   @media (max-width: $mobile) {
     padding: 60px 0;

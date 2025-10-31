@@ -3,13 +3,47 @@
   color: $main-color;
   overflow-x: hidden;
 
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 220px;
+    right: 0;
+    background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    z-index: 0;
+    @media (max-width: 1225px) {
+      top: 600px;
+      background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    }
+    @media (max-width: 890px) {
+      top: 770px;
+      background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    }
+
+    @media (min-width: 1225px) and (max-width: 1350px) {
+      top: 400px;
+      background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    }
+    @media (min-width: $mobile) and (max-width: $tablet) {
+      top: 273px;
+      background: url(../media/graphic-glims-mobile.svg) no-repeat top / 100%;
+    }
+    @media (max-width: $mobile) {
+      top: 220px;
+      background: url(../media/graphic-glims-mobile.svg) no-repeat top / 100%;
+    }
+  }
+
   &__container {
     border-bottom: $main-border;
-    padding: 174px 0 100px;
+    padding: 72px 0 174px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    position: relative;
     @media (max-width: $tablet) {
       gap: 40px;
       padding: 68px 0 60px;
@@ -18,6 +52,8 @@
   &__text {
     width: 816px;
     text-align: center;
+    position: relative;
+    z-index: 10;
     p {
       @include font-style(24px, 32px);
 

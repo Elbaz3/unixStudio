@@ -2,6 +2,11 @@
   padding: 0 0 120px 0;
   position: relative;
 
+  @media (max-width: $tablet) {
+    padding: 0 0 60px 0;
+    margin-top: -10px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -14,19 +19,26 @@
     z-index: -1;
 
     @media (max-width: $tablet) {
-      top: 280px;
+      top: 230px;
       background: url(../media/light-video-mobile.png) no-repeat top / 100%;
     }
-  }
-
-  @media (max-width: $tablet) {
-    padding: 60px 0;
+    @media (min-width: $tablet) {
+      top: 220px;
+      background: url(../media/light-video.png) no-repeat top / 100%;
+    }
+    @media (min-width: 675px) and (max-width: 770px) {
+      top: 190px;
+    }
   }
 
   .heading-text {
     color: $main-color;
     background-color: $secondary-color;
     padding: 120px 5vw 63px;
+
+    @media (max-width: $tablet) {
+      padding-top: 60px;
+    }
   }
 
   &__container {

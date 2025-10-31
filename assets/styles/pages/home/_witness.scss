@@ -1,5 +1,23 @@
 .witness {
   padding-top: 68px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 148;
+    right: 0;
+    background: url(../media/Vector-witness.svg) no-repeat top / 100%;
+    z-index: -1;
+
+    @media (max-width: $tablet) {
+      top: 115px;
+      background: url(../media/Vector-witness-mobile.svg) no-repeat top / 100%;
+    }
+  }
 
   &__container {
     display: flex;
