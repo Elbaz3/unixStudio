@@ -115,7 +115,7 @@
       @include font-style(32px, 36px);
       cursor: pointer;
 
-      &:hover + .our-services__service__arrow > img {
+      &:hover + .our-services__service__arrow img {
         transform: translate(10px, -10px);
       }
 

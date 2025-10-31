@@ -106,6 +106,10 @@
       &__list {
         padding-left: 40px;
 
+        @media (max-width: $tablet) {
+          padding-left: 0;
+        }
+
         &__item {
           border-bottom: $main-border;
           padding: 24px 0;
