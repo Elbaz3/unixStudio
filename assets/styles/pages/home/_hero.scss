@@ -45,7 +45,10 @@
     padding-top: 100px;
     display: flex;
     gap: 80px;
+    z-index: 100;
+
     h1 {
+      position: relative;
       width: fit-content;
       display: flex;
       flex-direction: column;
@@ -54,6 +57,7 @@
       font-size: clamp(36px, 7vw, 96px);
       line-height: clamp(36px, 7vw, 96px);
       text-transform: uppercase;
+      z-index: 100;
     }
 
     &::before {
