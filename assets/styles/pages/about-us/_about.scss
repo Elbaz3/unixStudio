@@ -1,0 +1,130 @@
+%text-style {
+  padding-top: 80px;
+  padding-bottom: 56px;
+
+  @media (max-width: $tablet) {
+    padding-top: 32px;
+  }
+
+  h2 {
+    font-family: $font-primary-bold;
+    @include font-style(24px, 28px);
+
+    @media (max-width: $tablet) {
+      @include font-style(16px, 100%);
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    @include font-style(18px, 24px);
+
+    @media (max-width: $tablet) {
+      @include font-style(16px, 22px);
+    }
+  }
+}
+
+.about {
+  background-color: $secondary-color;
+  color: $main-color;
+  position: relative;
+  z-index: 50;
+  padding-bottom: 82px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1.17fr 1fr;
+    border-top: $main-border;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    &__image {
+      border-left: $main-border;
+      padding: 80px 40px 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+
+      @media (max-width: $tablet) {
+        padding: 0;
+        border-left: 0;
+        gap: 32px;
+      }
+
+      img {
+        width: 400px;
+
+        @media (max-width: $tablet) {
+          width: 284px;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        @include font-style(24px, 100%);
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+
+    &__text-1 {
+      @extend %text-style;
+      padding-right: 75px;
+      @media (max-width: $tablet) {
+        padding-right: 20px;
+      }
+    }
+
+    &__text-2 {
+      @extend %text-style;
+      padding-left: 75px;
+      border-left: $main-border;
+
+      @media (max-width: $tablet) {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &__top--mobile {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    &__text {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: $main-border;
+    }
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    text-align: center;
+
+    p {
+      max-width: 1123px;
+      @include font-style(28px, 38px);
+
+      @media (max-width: $tablet) {
+        @include font-style(16px, 22px);
+      }
+    }
+  }
+}
