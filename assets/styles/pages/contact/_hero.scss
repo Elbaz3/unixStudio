@@ -1,0 +1,38 @@
+.hero--contact {
+  &::after {
+    background: none;
+  }
+
+  .hero__container {
+    border: 0;
+  }
+
+  &__content-bottom {
+    color: $secondary-color;
+    justify-content: flex-start;
+    gap: 80px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    &__box {
+      h2 {
+        @include font-style(24px, 28px);
+        @media (max-width: $tablet) {
+          @include font-style(22px, 24px);
+        }
+      }
+
+      p {
+        color: $third-color;
+        @include font-style(28x, 38px);
+        @media (max-width: $tablet) {
+          @include font-style(20px, 30px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,298 @@
+main {
+}
+
+.contact {
+  background-color: rgba(18, 18, 18, 1);
+  padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @media (max-width: $tablet) {
+    padding-top: 80px;
+  }
+
+  &__list {
+    margin-left: 5vw;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+    overflow: auto;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &__main {
+      max-width: 336px;
+      min-width: 336px;
+      align-self: flex-end;
+      margin-right: 56px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+
+      @media (max-width: $tablet) {
+        margin-right: 0;
+        max-width: 319px;
+        min-width: 319px;
+      }
+
+      .footer-image--mobile {
+        @media (min-width: $tablet) {
+          display: none;
+        }
+      }
+      .footer-image--desktop {
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 400px;
+        padding-bottom: 24px;
+        border-bottom: $main-border;
+        font-family: $font-primary-bold;
+
+        @media (max-width: $tablet) {
+          margin-top: 100px;
+        }
+
+        h2 {
+          @include font-style(32px, 36px);
+
+          @media (max-width: $tablet) {
+            @include font-style(24px, 28px);
+          }
+        }
+        .arrow {
+          @media (max-width: $tablet) {
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    &__card {
+      background-color: rgba(30, 30, 30, 1);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+
+      &__top {
+        h3 {
+          font-family: $font-primary-bold;
+          @include font-style(24px, 28px);
+        }
+      }
+      &__bottom {
+        margin-top: 182px;
+
+        @media (max-width: $tablet) {
+          margin-top: 100px;
+        }
+
+        p {
+          @include font-style(24px, 32px);
+          min-width: 340px;
+
+          @media (max-width: $tablet) {
+            min-width: 255px;
+
+            @include font-style(20px, 30px);
+          }
+        }
+
+        .author {
+          margin-top: 60px;
+
+          h2 {
+            @include font-style(16px, 100%);
+          }
+
+          span {
+            font-family: $font-secondary;
+            color: $third-color;
+            @include font-style(16px, 22px);
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+
+    &__main-2 {
+      max-width: 336px;
+      min-width: 336px;
+      display: flex;
+      flex-direction: column;
+      gap: 140px;
+      align-items: flex-start;
+
+      @media (max-width: $tablet) {
+        margin-right: 0;
+        max-width: 319px;
+        min-width: 319px;
+      }
+      &__head {
+      }
+
+      &__foot {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 24px;
+
+        @media (max-width: $tablet) {
+          flex-direction: row;
+          gap: 113px;
+        }
+
+        h2 {
+          @include font-style(32px, 36px);
+
+          @media (max-width: $tablet) {
+            @include font-style(24px, 28px);
+          }
+        }
+
+        img {
+          width: 24px;
+        }
+      }
+    }
+
+    &__card-2 {
+      min-width: 420px;
+      border-radius: 20px;
+      overflow: hidden;
+
+      @media (max-width: $tablet) {
+        min-width: 319px;
+      }
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 150px;
+    border-bottom: $main-border;
+    padding-bottom: 60px;
+
+    @media (min-width: $desktop-xl) and (max-width: 1400px) {
+      gap: 80px;
+    }
+
+    @media (max-width: $desktop-xl) {
+      gap: 55px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      a {
+        max-width: fit-content;
+        img {
+          width: 60px;
+          @media (max-width: $tablet) {
+            width: 56px;
+          }
+        }
+      }
+
+      h2 {
+        font-family: $font-primary-semi;
+        @include font-style(24px, 28px);
+        text-transform: uppercase;
+        @media (max-width: $desktop) {
+          @include font-style(16px, 100%);
+        }
+      }
+    }
+  }
+
+  &__reach-us {
+    margin-top: 130px;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @media (max-width: $tablet) {
+      gap: 28px;
+      flex-direction: column;
+    }
+    img {
+      width: 340px;
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        width: 250px;
+      }
+
+      @media (max-width: $tablet) {
+        width: 310px;
+      }
+    }
+
+    &__text {
+      margin-left: 118px;
+
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        margin-left: 60px;
+      }
+      @media (max-width: $tablet) {
+        align-self: flex-start;
+        margin: 48px 0 0 0;
+      }
+
+      h2 {
+        @include font-style(24px, 28px);
+      }
+
+      p {
+        padding-top: 12px;
+        color: $third-color;
+        @include font-style(24px, 32px);
+      }
+    }
+  }
+}
+
+.footer--contact {
+  background-color: rgba(18, 18, 18, 1);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5vw;
+    padding: 40px 0;
+    gap: 26px;
+    border-top: 1px solid;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    .top {
+      display: flex;
+      gap: 28px;
+      cursor: pointer;
+
+      &:hover > .scroll-top-i {
+        transform: rotate(20deg);
+      }
+      .scroll-top-i {
+        transition: 0.3s;
+      }
+    }
+  }
+}
