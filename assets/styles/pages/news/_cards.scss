@@ -1,0 +1,110 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 100px;
+
+  @media (min-width: $tablet) and (max-width: $desktop-xl) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 32px;
+    border-top: $main-border;
+
+    @media (max-width: $tablet) {
+      margin-top: 60px;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      &__person {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .image {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .person-info {
+          h3 {
+            font-family: $font-secondary;
+            font-weight: bold;
+            @include font-style(20px, 100%);
+          }
+
+          p {
+            color: rgba(65, 65, 65, 1);
+            @include font-style(16px, 22px);
+          }
+        }
+      }
+
+      &__title {
+        max-width: 404px;
+        h2 {
+          font-family: $font-secondary;
+          font-weight: 600;
+          @include font-style(20px, 26px);
+
+          @media (max-width: $tablet) {
+            @include font-style(24px, 28px);
+          }
+        }
+      }
+
+      &__news-info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .category {
+          flex: 1;
+          min-height: 0;
+          padding: 14px 28px;
+
+          @media (max-width: $tablet) {
+            padding: 14px 20px;
+            @include font-style(16px, 100%);
+          }
+        }
+
+        .reader {
+          flex: 2;
+          min-height: 0;
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          @media (max-width: $tablet) {
+            flex-direction: column;
+            gap: 8px;
+          }
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+  }
+}

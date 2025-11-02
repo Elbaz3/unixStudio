@@ -1,0 +1,217 @@
+.news {
+  background-color: $secondary-color;
+  color: $main-color;
+  position: relative;
+  z-index: 10;
+
+  &__container {
+    padding-top: 64px;
+    border-top: $main-border;
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 48px;
+    border-bottom: $main-border;
+    border-width: 8px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 20px;
+      border: 0;
+      padding: 0;
+    }
+
+    &__category {
+      background-color: rgba(245, 245, 245, 1);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 130px;
+      @include font-style(18px, 24px);
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        padding: 12px 28px;
+        @include font-style(16px, 22px);
+      }
+
+      span {
+        font-family: $font-secondary;
+      }
+    }
+  }
+
+  &__content {
+    &__header {
+      @include flex-between;
+
+      @media (max-width: $tablet) {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 36px;
+      }
+
+      &__person {
+        display: flex;
+        align-items: center;
+        gap: 15.5px;
+
+        .image {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          @media (min-width: $tablet) and (max-width: $desktop-xl) {
+            width: 60px;
+            height: 60px;
+          }
+
+          @media (max-width: $tablet) {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .details {
+          h2 {
+            @include font-style(24px, 100%);
+            font-family: $font-primary-semi;
+
+            @media (min-width: $tablet) and (max-width: $desktop-xl) {
+              @include font-style(14px, 100%);
+            }
+
+            @media (max-width: $tablet) {
+              @include font-style(16px, 100%);
+            }
+          }
+
+          p {
+            margin-top: 4px;
+            color: $third-color;
+            @include font-style(16px, 22px);
+
+            @media (min-width: $tablet) and (max-width: $desktop-xl) {
+              @include font-style(13px, 100%);
+            }
+
+            @media (max-width: $tablet) {
+              @include font-style(12px, 100%);
+            }
+          }
+        }
+      }
+
+      &__title {
+        max-width: 452px;
+        h2 {
+          @include font-style(32px, 36px);
+          font-family: $font-primary-semi;
+
+          @media (min-width: $tablet) and (max-width: $desktop-xl) {
+            @include font-style(18px, 100%);
+          }
+
+          @media (max-width: $tablet) {
+            @include font-style(22px, 28px);
+          }
+        }
+      }
+
+      &__nav {
+        display: flex;
+        gap: 12px;
+
+        .arrow {
+          @include flex-center;
+          height: 60px;
+          width: 60px;
+          background-color: $fifth-color;
+          border-radius: 50%;
+          cursor: pointer;
+
+          @media (max-width: $tablet) {
+            height: 36px;
+            width: 36px;
+          }
+        }
+      }
+      &__nav--desktop {
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+      &__nav--mobile {
+        @media (min-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+
+    &__body {
+      margin-top: 80px;
+      margin-bottom: 100px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+
+      &__text {
+        @include flex-between;
+        padding-bottom: 48px;
+      }
+
+      &__image {
+        width: 100%;
+        height: 700px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.cat-active {
+  background-color: rgba(18, 18, 18, 1);
+  color: $secondary-color;
+}
+
+.wrapper-head {
+  @media (max-width: $tablet) {
+    width: 100%;
+    @include flex-between;
+  }
+}
+
+.new-num {
+  span {
+    font-family: $font-primary-bold;
+    @include font-style(64px, 68px);
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    text-transform: uppercase;
+  }
+}
+
+.category {
+  text-align: center;
+  width: fit-content;
+  padding: 16px 32px;
+  background-color: $fifth-color;
+  border-radius: 130px;
+  font-family: $font-secondary;
+  @include font-style(20px, 30px);
+}

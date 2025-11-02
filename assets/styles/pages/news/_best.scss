@@ -1,0 +1,85 @@
+.best {
+  display: flex;
+  flex-direction: column;
+  margin: 120px 0;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &__head {
+    padding-top: 50px;
+    border-top: 3px solid rgba(18, 18, 18, 1);
+    h2 {
+      font-family: $font-primary-bold;
+      @include font-style(160px, 160px);
+      text-align: center;
+
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        @include font-style(120px, 120px);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      @include flex-between;
+      padding: 60px 0;
+
+      @media (min-width: $desktop) and (max-width: $desktop-xl) {
+        padding: 40px 0;
+      }
+
+      .cards__card__details__person {
+        .image {
+          @media (min-width: $tablet) and (max-width: $desktop) {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .person-info {
+          h3 {
+            @media (min-width: $tablet) and (max-width: $desktop) {
+              @include font-style(12px, 100%);
+            }
+          }
+          p {
+            @media (min-width: $tablet) and (max-width: $desktop) {
+              margin-top: 3px;
+              @include font-style(10px, 100%);
+            }
+          }
+        }
+      }
+
+      &__title {
+        max-width: 286px;
+
+        @media (min-width: $desktop) and (max-width: $desktop-xl) {
+          max-width: 200px;
+
+          @media (min-width: $tablet) and (max-width: $desktop) {
+            max-width: 130px;
+          }
+        }
+        h3 {
+          font-family: $font-primary-semi;
+          @include font-style(20px, 100%);
+
+          @media (min-width: $tablet) and (max-width: $desktop-xl) {
+            @include font-style(14px, 100%);
+          }
+        }
+      }
+
+      .category {
+        padding: 12px 20px;
+        @include font-style(16px, 100%);
+      }
+    }
+  }
+}
