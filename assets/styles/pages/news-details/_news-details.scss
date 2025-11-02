@@ -1,0 +1,169 @@
+.news-details {
+  background-color: $secondary-color;
+  color: $main-color;
+  position: relative;
+  z-index: 10;
+  padding-top: 80px;
+
+  &__top {
+    &__over {
+      margin-top: 100px;
+      padding-bottom: 80px;
+      display: flex;
+
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      h3 {
+        flex: 1;
+        min-width: 0;
+        font-family: $font-primary-bold;
+        @include font-style(24px, 28px);
+      }
+
+      p {
+        flex: 3;
+        min-width: 0;
+        text-align: right;
+        @include font-style(44px, 56px);
+
+        @media (max-width: $tablet) {
+          text-align: left;
+          @include font-style(28px, 38px);
+        }
+      }
+    }
+  }
+}
+
+.best__list__item {
+  @include flex-between;
+  gap: 170px;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 36px;
+    align-items: flex-start;
+  }
+  @media (min-width: $desktop) and (max-width: $desktop-xl) {
+    padding: 40px 0;
+    gap: 70px;
+  }
+  .cards__card__details__person {
+    display: flex;
+    align-items: center;
+    gap: 15.5px;
+
+    .image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media (max-width: $tablet) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .details {
+      h2 {
+        @include font-style(24px, 100%);
+        font-family: $font-primary-semi;
+
+        @media (min-width: $tablet) and (max-width: $desktop-xl) {
+          @include font-style(14px, 100%);
+        }
+
+        @media (max-width: $tablet) {
+          @include font-style(16px, 100%);
+        }
+      }
+
+      p {
+        margin-top: 4px;
+        color: $third-color;
+        @include font-style(16px, 22px);
+
+        @media (min-width: $tablet) and (max-width: $desktop-xl) {
+          @include font-style(13px, 100%);
+        }
+
+        @media (max-width: $tablet) {
+          @include font-style(12px, 100%);
+        }
+      }
+    }
+
+    .image {
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .person-info {
+      h3 {
+        font-family: $font-secondary;
+        font-weight: 600;
+        @media (min-width: $tablet) and (max-width: $desktop) {
+          @include font-style(12px, 100%);
+        }
+      }
+      p {
+        @media (min-width: $tablet) and (max-width: $desktop) {
+          margin-top: 3px;
+          @include font-style(10px, 100%);
+        }
+      }
+    }
+  }
+}
+
+.category {
+  text-align: center;
+  width: fit-content;
+  padding: 16px 32px;
+  background-color: $fifth-color;
+  border-radius: 130px;
+  font-family: $font-secondary;
+  @include font-style(20px, 30px);
+}
+
+.reader {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 170px;
+
+  @media (min-width: $tablet) and (max-width: $desktop-xl) {
+    gap: 70px;
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.news-det {
+  display: flex;
+  align-items: center;
+  gap: 170px;
+
+  @media (min-width: $tablet) and (max-width: $desktop-xl) {
+    gap: 70px;
+  }
+
+  @media (max-width: $tablet) {
+    gap: 50px;
+    justify-content: space-between;
+  }
+}
