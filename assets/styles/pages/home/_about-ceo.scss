@@ -13,11 +13,14 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 640px;
+    top: 540px;
     right: 0;
     background: url(../media/Vector-about-ceo.svg) no-repeat top / 100%;
     z-index: 2;
 
+    @media (min-width: 1700px) {
+      top: 350px;
+    }
     @media (max-width: $tablet) {
       top: 230px;
       background: none;

@@ -12,6 +12,9 @@
     background: url(../media/light-video.png) no-repeat top / 100%;
     z-index: -1;
 
+    @media (min-width: 1900px) {
+      top: -120px;
+    }
     @media (max-width: $tablet) {
       top: -120px;
       background: url(../media/light-video-mobile.png) no-repeat top / 100%;

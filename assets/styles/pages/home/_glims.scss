@@ -13,6 +13,14 @@
     right: 0;
     background: url(../media/graphic-glims.svg) no-repeat top / 100%;
     z-index: 0;
+    @media (min-width: 2000px) {
+      top: -120px;
+      background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    }
+    @media (min-width: 1600px) and (max-width: 2000px) {
+      top: 70px;
+      background: url(../media/graphic-glims.svg) no-repeat top / 100%;
+    }
     @media (max-width: 1225px) {
       top: 600px;
       background: url(../media/graphic-glims.svg) no-repeat top / 100%;

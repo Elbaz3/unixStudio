@@ -15,6 +15,13 @@
     background: url(../media/Vector-about.png) no-repeat top / 100%;
     z-index: 5;
 
+    @media (min-width: 2000px) {
+      top: -20px;
+    }
+    @media (min-width: 1600px) and (max-width: 2000px) {
+      top: 70px;
+    }
+
     @media (max-width: $tablet) {
       top: 264px;
       background: url(../media/Vector-about-mobile.png) no-repeat top / 100%;

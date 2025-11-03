@@ -8,10 +8,17 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 148;
+    top: 148px;
     right: 0;
     background: url(../media/Vector-witness.svg) no-repeat top / 100%;
     z-index: -1;
+
+    @media (min-width: 2000px) {
+      top: -120px;
+    }
+    @media (min-width: 1600px) and (max-width: 2000px) {
+      top: 70px;
+    }
 
     @media (max-width: $tablet) {
       top: 115px;
