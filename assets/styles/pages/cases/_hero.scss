@@ -1,0 +1,45 @@
+.hero {
+  &::after {
+    background: none;
+  }
+
+  &__container {
+    border: 0;
+  }
+
+  &__content-top {
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      right: 8vw;
+      background: url(../media/cases-shape.svg) no-repeat top right / 270px;
+      z-index: 5;
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        background: url(../media/cases-shape.svg) no-repeat bottom right / 240px;
+      }
+
+      @media (max-width: $tablet) {
+        background: none;
+      }
+    }
+  }
+
+  &__content-bottom {
+    p {
+      color: $secondary-color;
+    }
+  }
+}
+
+.bordered-word {
+  font-family: $font-primary-bold;
+  @include font-style(64px, 68px);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px $secondary-color;
+  text-transform: uppercase;
+}

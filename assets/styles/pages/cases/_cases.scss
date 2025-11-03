@@ -1,0 +1,215 @@
+%p-style {
+  margin-top: 36px;
+  color: $fourth-color;
+  @include font-style(18px, 24px);
+}
+
+.cases {
+  background-color: rgba(18, 18, 18, 1);
+  padding-bottom: 120px;
+
+  @media (max-width: $desktop) {
+    flex-direction: column;
+    gap: 20px;
+    border: 0;
+    padding: 48px 0;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 28px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 20px;
+      border: 0;
+      padding: 40px 0;
+    }
+
+    &__category {
+      background-color: rgba(42, 42, 42, 1);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 130px;
+      @include font-style(18px, 24px);
+
+      @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        padding: 12px 28px;
+        @include font-style(16px, 22px);
+      }
+
+      &.active {
+        background-color: $secondary-color;
+        color: $main-color;
+      }
+
+      span {
+        font-family: $font-secondary;
+      }
+    }
+  }
+
+  &__body {
+    &__element {
+      border-top: $third-border;
+      display: flex;
+
+      @media (max-width: $desktop) {
+        flex-direction: column;
+      }
+
+      &:last-of-type {
+        border-bottom: $third-border;
+      }
+
+      &__feature {
+        padding-top: 60px;
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 40px;
+
+        @media (max-width: $desktop) {
+          border: 0;
+          padding: 40px 0;
+          gap: 48px;
+        }
+
+        .circle {
+          width: 246px;
+          margin-bottom: 250px;
+          margin-left: 17px;
+          height: 246px;
+          border-radius: 50%;
+          @include flex-center;
+          flex-direction: column;
+          gap: 32px;
+          border: $third-border;
+
+          @media (max-width: $desktop) {
+            align-self: center;
+            margin: 0;
+          }
+
+          img {
+            transition: 0.3s;
+          }
+
+          &:hover img {
+            transform: translate(10px, -10px);
+          }
+        }
+      }
+      &__list {
+        flex: 3;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: $desktop) {
+          grid-template-columns: 1fr;
+        }
+
+        &__item {
+          padding-top: 60px;
+          padding-bottom: 80px;
+          border-bottom: 1px dashed $secondary-color;
+
+          @media (max-width: $desktop) {
+            border-top: $third-border;
+            padding-top: 48px;
+          }
+
+          .head {
+            @include flex-between;
+            .text {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+
+              span {
+                font-family: $font-secondary;
+                color: $fourth-color;
+                @include font-style(18px, 100%);
+              }
+            }
+          }
+
+          .body {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+
+            p {
+              @extend %p-style;
+            }
+
+            .image-holder {
+              align-self: center;
+              width: 25vw;
+              height: 25vw;
+              border-radius: 50%;
+              overflow: hidden;
+
+              //   @media (max-width: $desktop)
+
+              @media (max-width: $desktop) {
+                width: 319px;
+                height: 319px;
+              }
+
+              img {
+                object-fit: cover;
+                height: 100%;
+              }
+            }
+          }
+        }
+
+        .col-1 {
+          padding: 0 48px 100px;
+          border-left: $third-border;
+
+          @media (max-width: $desktop) {
+            border-left: 0;
+            padding: 0;
+          }
+        }
+        .col-2 {
+          padding: 0 48px 100px;
+          border-left: $third-border;
+          @media (max-width: $desktop) {
+            border-left: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.text {
+  h3 {
+    font-family: $font-primary-bold;
+    @include font-style(24px, 28px);
+  }
+
+  p {
+    @extend %p-style;
+  }
+}
+
+.btn {
+  width: fit-content;
+  margin: 60px auto 0;
+  padding-bottom: 12px;
+  border-color: $secondary-color;
+  font-family: $font-primary-semi;
+}
