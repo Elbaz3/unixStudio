@@ -17,6 +17,10 @@
   background: #666;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .container {
   width: 90%;
   margin-inline: 5vw;
