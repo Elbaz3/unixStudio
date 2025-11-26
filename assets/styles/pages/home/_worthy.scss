@@ -31,7 +31,7 @@
       @include font-style(96px, 96px);
       text-transform: uppercase;
       @media (max-width: $tablet) {
-        @include font-style(44px, 44px);
+        @include font-style(38px, 38px);
       }
       @media (min-width: $tablet) and (max-width: $desktop-xl) {
         @include font-style(64px, 64px);
@@ -260,7 +260,7 @@
           @include font-style(64px, 68px);
 
           @media (max-width: $tablet) {
-            @include font-style(24px, 28px);
+            @include font-style(22px, 28px);
             margin-top: 50px;
           }
           @media (min-width: $tablet) and (max-width: $desktop-xl) {
