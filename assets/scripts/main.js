@@ -1,6 +1,7 @@
 const list = document.querySelector(".nav__wrapper__list");
 const menuIcon = document.querySelector(".header__menu");
 const scrollUp = document.querySelector(".scroll-top");
+const footer = document.querySelector(".footer");
 
 menuIcon.addEventListener("click", () => {
   list.classList.toggle("toggle-open");
@@ -15,9 +16,9 @@ scrollUp.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    scrollUp.style.display = "block";
+  if (window.scrollY > 400 && window.scrollY < footer.offsetTop) {
+    scrollUp.classList.add("fixed-scroll");
   } else {
-    scrollUp.style.display = "none";
+    scrollUp.classList.remove("fixed-scroll");
   }
 });

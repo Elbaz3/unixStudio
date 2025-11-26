@@ -180,17 +180,20 @@
       }
 
       .scroll-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: white;
         padding: 10px;
-        width: 37px;
+        width: 50px;
         cursor: pointer;
         transition: 0.3s;
-        z-index: 1000;
-        border: $main-border;
-        display: none;
+
+        &.fixed-scroll {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: white;
+          z-index: 1000;
+          border: $main-border;
+          width: 37px;
+        }
 
         // @media (min-width: $tablet) and (max-width: $desktop-xl) {
         //   width: 20px;
