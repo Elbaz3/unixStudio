@@ -2,7 +2,7 @@
   background-color: rgba(245, 245, 245, 1);
   color: $main-color;
   max-height: 100vh;
-  position: relative;
+  // position: relative;
 
   @media (max-width: $desktop-xl) {
     max-height: none;
@@ -180,13 +180,21 @@
       }
 
       .scroll-top {
-        width: 30px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: white;
+        padding: 10px;
+        width: 37px;
         cursor: pointer;
         transition: 0.3s;
+        z-index: 1000;
+        border: $main-border;
+        display: none;
 
-        @media (min-width: $tablet) and (max-width: $desktop-xl) {
-          width: 20px;
-        }
+        // @media (min-width: $tablet) and (max-width: $desktop-xl) {
+        //   width: 20px;
+        // }
 
         &:hover {
           transform: rotate(10deg);

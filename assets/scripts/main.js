@@ -13,3 +13,11 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollUp.style.display = "block";
+  } else {
+    scrollUp.style.display = "none";
+  }
+});
